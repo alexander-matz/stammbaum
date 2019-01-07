@@ -49,6 +49,7 @@ print('  size = "23.4,33.1"') # fits on A1
 print('  ratio = 1.4142135') # vertical DIN
 print('  ranksep = 1')
 print('  node [fontname=helvetica shape=plain]')
+#print('  edge [dir=back]')
 
 for key, val in graph.items():
     print('  %s [label=< <TABLE BORDER="0">' % (key,))
@@ -71,6 +72,6 @@ if rootNode != None:
 print('')
 
 for key, val in graph.items():
-    print('  %s -> {%s} [dir=back]' % (key, " ".join(val["dst"])))
+    print('  %s -> {%s}' % (key, " ".join(val["dst"])))
 
 print('}')
